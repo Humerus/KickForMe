@@ -17,7 +17,7 @@ class KickForAdmin implements Plugin {
         $this->server = ServerAPI::request();
     }
     public function init() {
-        $this->api->addHandler("player.join", array($this, "KickIt"), 15);
+        $this->api->addHandler("player.connect", array($this, "KickIt"), 15);
     }
     public function __destruct() {
     }
