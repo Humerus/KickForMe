@@ -23,7 +23,7 @@ class KickForAdmin implements Plugin {
     }
     public function KickIt($player, $event) {
         switch($event) {
-            case 'player.join':
+            case 'player.connect':
                         if (($player->username === "Steve") || ($player->username === "OtherPerson") && (count($this->api->player->getAll()) === $this->api->getProperty('maxPlayers'))) {
                         $l = array();
                         foreach($this->server->clients as $p){
